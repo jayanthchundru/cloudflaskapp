@@ -104,7 +104,7 @@ sudo systemctl restart apache2
 ```bash
 python3 flaskapp.py
 ```
-Visit `http://your-server-ip/` in your browser.
+Visit `ec2-18-117-7-137.us-east-2.compute.amazonaws.com` in your browser.
 
 ## Usage
 1. **Registration**: Users sign up with a username, password, and other details.

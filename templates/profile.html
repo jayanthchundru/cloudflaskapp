@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Profile</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <p>Username: {{ user[0] }}</p>
+    <p>First Name: {{ user[2] }}</p>
+    <p>Last Name: {{ user[3] }}</p>
+    <p>Email: {{ user[4] }}</p>
+    <p>Address: {{ user[5] }}</p>
+    <p>Uploaded File: {{ user[6] }}</p>
+    <p>Word Count: {{ user[7] }}</p>
+    <a href="{{ url_for('download_file', filename=user[6]) }}" download>Download File</a><br>
+    <a href="{{ url_for('index') }}">Home</a>
+</body>
+</html>
